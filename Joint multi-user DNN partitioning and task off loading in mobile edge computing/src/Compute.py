@@ -1,37 +1,52 @@
 class Compute:
-    def __init__(self):
-        pass
+    """
+    Computation and communication models
+    """
 
-    # FLOPs
-    def Fl(self , din, dout ):
-        """
-        FLOPs for fully connected
-        :param din: dimension input
-        :param dout: dimension output
-        :return:
-        """
-        return 2*din*dout   # (din + (din - 1) + 1) * dout
+    # -----------------------------
+    # FLOPs models
+    # -----------------------------
 
-    def Fc(self , cin , cout , kw, kh, w, h):
+    def Fl(self, din, dout):
         """
-        FLOPs for convolution kernels
-        :param cin: channel size
-        :param cout:
-        :param kw: kernel size
-        :param kh:
-        :param w: output size
-        :param h:
-        :return: int
+        FLOPs for fully connected layer
         """
-        return 2*cin*kw*kh*cout*w*h
+        return 2 * din * dout
 
-    def Dl(self , cin, w, h):
+    def Fc(self, cin, cout, kw, kh, w, h):
         """
-        Compute output data size D_L (in MB)
-        Assumes FP32 (4 bytes per element)
+        FLOPs for convolution layer
         """
-        bytes_per_element = 4  # FP32
-        return cin * w * h * bytes_per_element / (1024 * 1024)
+        return 2 * cin * kw * kh * cout * w * h
 
+    # -----------------------------
+    # Output data size (Eq. 3)
+    # -----------------------------
 
+    def Dl(self, cin, w, h):
+        """
+        Output data size in MB (FP32)
+        """
+        return cin * w * h * 4 / (1024 * 1024)
 
+    # -----------------------------
+    # Time models
+    # -----------------------------
+
+    def local_time(self, flops, f_local):
+        """
+        Local execution time
+        """
+        return flops / f_local
+
+    def edge_time(self, flops, f_edge):
+        """
+        Edge execution time
+        """
+        return flops / f_edge
+
+    def uplink_time(self, data_mb, bandwidth):
+        """
+        Uplink transmission time
+        """
+        return data_mb / bandwidth
