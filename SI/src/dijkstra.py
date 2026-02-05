@@ -76,6 +76,7 @@ class Dijkstra :
             if lst_nodes[i] > self.num_points:
                 cut_point = i
                 break
+        return cut_point
         # if self.verbose :
         #     print(self.machine[0] , " : ", lst_nodes[:cut_point])
         #     lst_nodes = [x - self.num_points for x in lst_nodes]

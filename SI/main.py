@@ -6,13 +6,6 @@ import time
 
 analyzer = YOLOLayerAnalyzer("yolo11n.pt")
 flops_layers, output_size_layers = analyzer.analyze()
-# f_edge_set = {
-#         0: 2e9
-#     }
-#
-# f_server_set = {
-#     0: 30e9
-# }
 
 f_edge_set = {i: ((i + 1)%10+1) * 2e9 for i in range(10)}
 f_server_set = {i: ((i + 1)%10+1) * 30e9 for i in range(10)}
@@ -39,6 +32,5 @@ for num in range(0, 20 , 2):
         measure(num)
         end = time.perf_counter_ns()
         lst_time.append(end - start)
-    # print(lst_time)
     print(f'{num} : {sum(lst_time) / len(lst_time)}')
 

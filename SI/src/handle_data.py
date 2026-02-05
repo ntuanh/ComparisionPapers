@@ -26,9 +26,6 @@ class Data:
   for size in output :
    self.comm_times.append(size/bandwidth)
 
-  # self.layer_times_2 = layer_times[0]
-  # self.layer_times_3 = layer_times[1]
-  # self.comm_times = comm_times
   self.cost_1 = 0
   self.cost_2 = sum(self.layer_times_3)
   self.sum_1 = sum(self.layer_times_2)
@@ -45,11 +42,11 @@ class Data:
 
  def get_test_bed_cost(self):
   for i in range(1, self.capacity - 1):
-   # option 1 : cost = time_layer[1] + time_layer[2] + time_comm
+   """ option 1 : cost = time_layer[1] + time_layer[2] + time_comm """
    # self.cost[i][i + 1] = self.layer_times_2[i]
    # self.cost[i + self.num_points][i + self.num_points + 1] = self.layer_times_3[i+1]
    # self.cost[i][i + self.num_points + 1] = self.comm_times[i]
-   # option 2 : cost = max(time_layer[1] , time_layer[2]) + time_comm
+   """ option 2 : cost = max(time_layer[1] , time_layer[2]) + time_comm """
    self.cost_1 += self.layer_times_2[i]
    self.cost_2 -= self.layer_times_3[i]
    # print(f"[i] : {i}")
@@ -63,5 +60,4 @@ class Data:
 
  def run(self):
   self.get_test_bed_cost()
-  # print(f'cost from handle data {self.cost}')
   return self.cost

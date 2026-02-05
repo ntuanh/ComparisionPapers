@@ -3,9 +3,6 @@ import torch.nn as nn
 from ultralytics import YOLO
 
 
-# --------------------------------------------------
-# Analyzer class
-# --------------------------------------------------
 class YOLOLayerAnalyzer:
     def __init__(self, model_name="yolo11n.pt", input_size=(1, 3, 640, 640)):
         self.model_name = model_name
@@ -19,7 +16,7 @@ class YOLOLayerAnalyzer:
 
         self.hooks = []
 
-    # ---------------- FLOPs formulas ----------------
+    """ FLOPs formulas """
     def flops_conv(self, layer, output):
         if not isinstance(output, torch.Tensor):
             return 0
@@ -52,9 +49,8 @@ class YOLOLayerAnalyzer:
         _, c, h, w = output.shape
         return c * h * w * 4 / (1024 * 1024)
 
-    # ---------------- Hook ----------------
+    """ Hook """
     def hook_fn(self, module, input, output):
-        # ---- FLOPs ----
         if isinstance(module, nn.Conv2d):
             flops = self.flops_conv(module, output)
         elif isinstance(module, nn.Linear):
@@ -66,7 +62,6 @@ class YOLOLayerAnalyzer:
         else:
             flops = 0
 
-        # ---- Output size ----
         if isinstance(output, torch.Tensor) and output.dim() == 4:
             output_mb = self.output_size_MB(output)
         else:
@@ -75,7 +70,6 @@ class YOLOLayerAnalyzer:
         self.flops_layers.append(flops)
         self.output_size_layers.append(output_mb)
 
-    # ---------------- Main API ----------------
     def analyze(self):
         # register hooks
         for m in self.model.modules():
