@@ -1,2 +1,2 @@
 # ComparisionPapers
-Project for re-build code of papers 
+Re-implementing Research Paper Code
