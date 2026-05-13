@@ -1,0 +1,301 @@
+[
+    {
+        "layer_index": 0,
+        "layer_name": "Conv",
+        "runtime_ms": 1.1242916666560632,
+        "tensor_shape": [
+            1,
+            16,
+            320,
+            320
+        ],
+        "tensor_size_kb": 6400.0,
+        "privacy_loss": 1.0
+    },
+    {
+        "layer_index": 1,
+        "layer_name": "Conv",
+        "runtime_ms": 1.0724000000360927,
+        "tensor_shape": [
+            1,
+            32,
+            160,
+            160
+        ],
+        "tensor_size_kb": 3200.0,
+        "privacy_loss": 0.9565217391304348
+    },
+    {
+        "layer_index": 2,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.1483208333326427,
+        "tensor_shape": [
+            1,
+            64,
+            160,
+            160
+        ],
+        "tensor_size_kb": 6400.0,
+        "privacy_loss": 0.9130434782608696
+    },
+    {
+        "layer_index": 3,
+        "layer_name": "Conv",
+        "runtime_ms": 1.0350208332662685,
+        "tensor_shape": [
+            1,
+            64,
+            80,
+            80
+        ],
+        "tensor_size_kb": 1600.0,
+        "privacy_loss": 0.8695652173913043
+    },
+    {
+        "layer_index": 4,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0692916666054468,
+        "tensor_shape": [
+            1,
+            128,
+            80,
+            80
+        ],
+        "tensor_size_kb": 3200.0,
+        "privacy_loss": 0.8260869565217391
+    },
+    {
+        "layer_index": 5,
+        "layer_name": "Conv",
+        "runtime_ms": 0.9612166666859897,
+        "tensor_shape": [
+            1,
+            128,
+            40,
+            40
+        ],
+        "tensor_size_kb": 800.0,
+        "privacy_loss": 0.782608695652174
+    },
+    {
+        "layer_index": 6,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.041470833342828,
+        "tensor_shape": [
+            1,
+            128,
+            40,
+            40
+        ],
+        "tensor_size_kb": 800.0,
+        "privacy_loss": 0.7391304347826086
+    },
+    {
+        "layer_index": 7,
+        "layer_name": "Conv",
+        "runtime_ms": 1.0571708332918206,
+        "tensor_shape": [
+            1,
+            256,
+            20,
+            20
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.6956521739130435
+    },
+    {
+        "layer_index": 8,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0160333332957332,
+        "tensor_shape": [
+            1,
+            256,
+            20,
+            20
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.6521739130434783
+    },
+    {
+        "layer_index": 9,
+        "layer_name": "SPPF",
+        "runtime_ms": 1.0479791666663612,
+        "tensor_shape": [
+            1,
+            256,
+            20,
+            20
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.6086956521739131
+    },
+    {
+        "layer_index": 10,
+        "layer_name": "C2PSA",
+        "runtime_ms": 0.9608249999928375,
+        "tensor_shape": [
+            1,
+            256,
+            20,
+            20
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.5652173913043479
+    },
+    {
+        "layer_index": 11,
+        "layer_name": "Upsample",
+        "runtime_ms": 1.086724999974346,
+        "tensor_shape": [
+            1,
+            256,
+            40,
+            40
+        ],
+        "tensor_size_kb": 1600.0,
+        "privacy_loss": 0.5217391304347826
+    },
+    {
+        "layer_index": 12,
+        "layer_name": "Concat",
+        "runtime_ms": 1.2034708333885646,
+        "tensor_shape": [
+            1,
+            384,
+            40,
+            40
+        ],
+        "tensor_size_kb": 2400.0,
+        "privacy_loss": 0.4782608695652174
+    },
+    {
+        "layer_index": 13,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0797166666331275,
+        "tensor_shape": [
+            1,
+            128,
+            40,
+            40
+        ],
+        "tensor_size_kb": 800.0,
+        "privacy_loss": 0.4347826086956522
+    },
+    {
+        "layer_index": 14,
+        "layer_name": "Upsample",
+        "runtime_ms": 0.9872500000559133,
+        "tensor_shape": [
+            1,
+            128,
+            80,
+            80
+        ],
+        "tensor_size_kb": 3200.0,
+        "privacy_loss": 0.3913043478260869
+    },
+    {
+        "layer_index": 15,
+        "layer_name": "Concat",
+        "runtime_ms": 0.9759916666401599,
+        "tensor_shape": [
+            1,
+            256,
+            80,
+            80
+        ],
+        "tensor_size_kb": 6400.0,
+        "privacy_loss": 0.34782608695652173
+    },
+    {
+        "layer_index": 16,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0257916666584304,
+        "tensor_shape": [
+            1,
+            64,
+            80,
+            80
+        ],
+        "tensor_size_kb": 1600.0,
+        "privacy_loss": 0.30434782608695654
+    },
+    {
+        "layer_index": 17,
+        "layer_name": "Conv",
+        "runtime_ms": 0.9894499999821468,
+        "tensor_shape": [
+            1,
+            64,
+            40,
+            40
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.26086956521739135
+    },
+    {
+        "layer_index": 18,
+        "layer_name": "Concat",
+        "runtime_ms": 1.0846166666548622,
+        "tensor_shape": [
+            1,
+            192,
+            40,
+            40
+        ],
+        "tensor_size_kb": 1200.0,
+        "privacy_loss": 0.21739130434782605
+    },
+    {
+        "layer_index": 19,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0359083333545034,
+        "tensor_shape": [
+            1,
+            128,
+            40,
+            40
+        ],
+        "tensor_size_kb": 800.0,
+        "privacy_loss": 0.17391304347826086
+    },
+    {
+        "layer_index": 20,
+        "layer_name": "Conv",
+        "runtime_ms": 1.0181291666716181,
+        "tensor_shape": [
+            1,
+            128,
+            20,
+            20
+        ],
+        "tensor_size_kb": 200.0,
+        "privacy_loss": 0.13043478260869568
+    },
+    {
+        "layer_index": 21,
+        "layer_name": "Concat",
+        "runtime_ms": 0.9746291666488105,
+        "tensor_shape": [
+            1,
+            384,
+            20,
+            20
+        ],
+        "tensor_size_kb": 600.0,
+        "privacy_loss": 0.08695652173913049
+    },
+    {
+        "layer_index": 22,
+        "layer_name": "C3k2",
+        "runtime_ms": 1.0142708333660266,
+        "tensor_shape": [
+            1,
+            256,
+            20,
+            20
+        ],
+        "tensor_size_kb": 400.0,
+        "privacy_loss": 0.05
+    }
+]
