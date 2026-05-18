@@ -1,0 +1,11 @@
+[
+    {"md_id": "MD_1", "compute_capacity_gflops": 150, "uplink_mbps": 15},
+    {"md_id": "MD_2", "compute_capacity_gflops": 80, "uplink_mbps": 20},
+    {"md_id": "MD_3", "compute_capacity_gflops": 200, "uplink_mbps": 25},
+    {"md_id": "MD_4", "compute_capacity_gflops": 50, "uplink_mbps": 10},
+    {"md_id": "MD_5", "compute_capacity_gflops": 300, "uplink_mbps": 30},
+    {"md_id": "MD_6", "compute_capacity_gflops": 120, "uplink_mbps": 12},
+    {"md_id": "MD_7", "compute_capacity_gflops": 90, "uplink_mbps": 18},
+    {"md_id": "MD_8", "compute_capacity_gflops": 400, "uplink_mbps": 35},
+    {"md_id": "MD_9", "compute_capacity_gflops": 60, "uplink_mbps": 8}
+]

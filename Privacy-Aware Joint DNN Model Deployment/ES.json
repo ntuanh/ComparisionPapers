@@ -1,0 +1,20 @@
+[
+    {
+        "es_id": "ES_1",
+        "compute_capacity_gflops": 40000,
+        "bandwidth_mbps": 100,
+        "description": "Jetson Orin Nano 8GB - Node A"
+    },
+    {
+        "es_id": "ES_2",
+        "compute_capacity_gflops": 40000,
+        "bandwidth_mbps": 120,
+        "description": "Jetson Orin Nano 8GB - Node B"
+    },
+    {
+        "es_id": "ES_3",
+        "compute_capacity_gflops": 20000,
+        "bandwidth_mbps": 80,
+        "description": "Edge Server C "
+    }
+]
