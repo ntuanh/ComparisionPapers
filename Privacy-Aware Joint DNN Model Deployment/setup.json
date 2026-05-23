@@ -1,0 +1,14 @@
+{
+    "md0": {
+        "uuid": "4b6c31a7-5829-4c28-97a1-d6480b543c72",
+        "partition_point": 12
+    },
+    "md1": {
+        "uuid": "f29b43d1-91a5-48b2-b18c-301a21bc9e44",
+        "partition_point": 12
+    },
+    "md2": {
+        "uuid": "681c2f9d-83e7-40b5-92dc-149b5c2a718d",
+        "partition_point": 18
+    }
+}

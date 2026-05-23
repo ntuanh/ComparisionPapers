@@ -1,0 +1,247 @@
+[
+    {
+        "cut_point": 0,
+        "name": "Input_Raw_Image",
+        "flops_giga": 0.0,
+        "payload_size_mb": 4.6875,
+        "crossing_tensors": [
+            0
+        ]
+    },
+    {
+        "cut_point": 1,
+        "name": "Layer_1_Conv_P1/2",
+        "flops_giga": 0.8275,
+        "payload_size_mb": 6.25,
+        "crossing_tensors": [
+            1
+        ]
+    },
+    {
+        "cut_point": 2,
+        "name": "Layer_2_Conv_P2/4",
+        "flops_giga": 0.4138,
+        "payload_size_mb": 3.125,
+        "crossing_tensors": [
+            2
+        ]
+    },
+    {
+        "cut_point": 3,
+        "name": "Layer_3_C3k2_B1",
+        "flops_giga": 0.8275,
+        "payload_size_mb": 6.25,
+        "crossing_tensors": [
+            3
+        ]
+    },
+    {
+        "cut_point": 4,
+        "name": "Layer_4_Conv_P3/8",
+        "flops_giga": 0.2069,
+        "payload_size_mb": 1.5625,
+        "crossing_tensors": [
+            4
+        ]
+    },
+    {
+        "cut_point": 5,
+        "name": "Layer_5_C3k2_B2",
+        "flops_giga": 0.4138,
+        "payload_size_mb": 4.6875,
+        "crossing_tensors": [
+            4,
+            5
+        ]
+    },
+    {
+        "cut_point": 6,
+        "name": "Layer_6_Conv_P4/16",
+        "flops_giga": 0.1034,
+        "payload_size_mb": 2.3437,
+        "crossing_tensors": [
+            4,
+            6
+        ]
+    },
+    {
+        "cut_point": 7,
+        "name": "Layer_7_C3k2_B3",
+        "flops_giga": 0.1034,
+        "payload_size_mb": 3.1249,
+        "crossing_tensors": [
+            4,
+            6,
+            7
+        ]
+    },
+    {
+        "cut_point": 8,
+        "name": "Layer_8_Conv_P5/32",
+        "flops_giga": 0.0517,
+        "payload_size_mb": 2.7343,
+        "crossing_tensors": [
+            8,
+            4,
+            6
+        ]
+    },
+    {
+        "cut_point": 9,
+        "name": "Layer_9_C3k2_B4",
+        "flops_giga": 0.0517,
+        "payload_size_mb": 2.7343,
+        "crossing_tensors": [
+            9,
+            4,
+            6
+        ]
+    },
+    {
+        "cut_point": 10,
+        "name": "Layer_10_SPPF",
+        "flops_giga": 0.0517,
+        "payload_size_mb": 2.7343,
+        "crossing_tensors": [
+            10,
+            4,
+            6
+        ]
+    },
+    {
+        "cut_point": 11,
+        "name": "Layer_11_C2PSA",
+        "flops_giga": 0.0517,
+        "payload_size_mb": 3.1249,
+        "crossing_tensors": [
+            10,
+            11,
+            4,
+            6
+        ]
+    },
+    {
+        "cut_point": 12,
+        "name": "Layer_12_nn.Upsample_1",
+        "flops_giga": 0.2069,
+        "payload_size_mb": 3.5156,
+        "crossing_tensors": [
+            10,
+            12,
+            4
+        ]
+    },
+    {
+        "cut_point": 13,
+        "name": "Layer_13_Concat_P4",
+        "flops_giga": 0.3103,
+        "payload_size_mb": 4.2969,
+        "crossing_tensors": [
+            10,
+            4,
+            13
+        ]
+    },
+    {
+        "cut_point": 14,
+        "name": "Layer_14_C3k2_H1",
+        "flops_giga": 0.1034,
+        "payload_size_mb": 5.0781,
+        "crossing_tensors": [
+            10,
+            4,
+            13,
+            14
+        ]
+    },
+    {
+        "cut_point": 15,
+        "name": "Layer_15_nn.Upsample_2",
+        "flops_giga": 0.4138,
+        "payload_size_mb": 5.8594,
+        "crossing_tensors": [
+            10,
+            13,
+            15
+        ]
+    },
+    {
+        "cut_point": 16,
+        "name": "Layer_16_Concat_P3",
+        "flops_giga": 0.8275,
+        "payload_size_mb": 8.9844,
+        "crossing_tensors": [
+            16,
+            10,
+            13
+        ]
+    },
+    {
+        "cut_point": 17,
+        "name": "Layer_17_C3k2_H2(P3)",
+        "flops_giga": 0.2069,
+        "payload_size_mb": 10.5469,
+        "crossing_tensors": [
+            16,
+            17,
+            10,
+            13
+        ]
+    },
+    {
+        "cut_point": 18,
+        "name": "Layer_18_Conv_H",
+        "flops_giga": 0.0517,
+        "payload_size_mb": 7.0312,
+        "crossing_tensors": [
+            16,
+            18,
+            10
+        ]
+    },
+    {
+        "cut_point": 19,
+        "name": "Layer_19_Concat_H_P4",
+        "flops_giga": 0.1552,
+        "payload_size_mb": 7.8125,
+        "crossing_tensors": [
+            16,
+            10,
+            19
+        ]
+    },
+    {
+        "cut_point": 20,
+        "name": "Layer_20_C3k2_H3(P4)",
+        "flops_giga": 0.1034,
+        "payload_size_mb": 8.5937,
+        "crossing_tensors": [
+            16,
+            10,
+            19,
+            20
+        ]
+    },
+    {
+        "cut_point": 21,
+        "name": "Layer_21_Conv_H_P5",
+        "flops_giga": 0.0259,
+        "payload_size_mb": 7.6172,
+        "crossing_tensors": [
+            16,
+            19,
+            21
+        ]
+    },
+    {
+        "cut_point": 22,
+        "name": "Layer_22_Concat_H_P5",
+        "flops_giga": 0.0776,
+        "payload_size_mb": 8.0078,
+        "crossing_tensors": [
+            16,
+            19,
+            22
+        ]
+    }
+]
