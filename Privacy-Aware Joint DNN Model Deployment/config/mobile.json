@@ -1,9 +1,0 @@
-{
-    "md_id": 1,
-
-    "compute_power": 1000,
-
-    "bandwidth": 500,
-
-    "video_path": "test.mp4"
-}
